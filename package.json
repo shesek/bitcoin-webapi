@@ -1,0 +1,15 @@
+{
+  "name": "bitcoin-webapi",
+  "author": "Nadav Ivgi",
+  "version": "0.1.0",
+  "description": "NodeJS web api for bitcoind",
+  "scripts": {
+    "start": "coffee app.coffee"
+  },
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "coffee-script": "~1.6.3",
+    "bitcoin": "~2.0.0",
+    "express": "~3.4.4"
+  }
+}
