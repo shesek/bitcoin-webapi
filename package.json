@@ -10,6 +10,7 @@
   "dependencies": {
     "coffee-script": "~1.6.3",
     "bitcoin": "~2.0.0",
-    "express": "~3.4.4"
+    "express": "~3.4.4",
+    "big.js": "~2.4.1"
   }
 }

@@ -1,4 +1,5 @@
 url = require 'url'
+big = require 'big.js'
 { Client } = require('bitcoin')
 
 SATOSHI = 100000000
@@ -16,7 +17,7 @@ out_paid_to = (vout, address) ->
 format_unspent = ({ tx, vout }) ->
   txid: tx.txid
   n: vout.n
-  value: vout.value * SATOSHI
+  value: +big(vout.value).times(SATOSHI).valueOf()
   value_bitcoin: vout.value
   script: vout.scriptPubKey.hex
   confirmations: tx.confirmations
