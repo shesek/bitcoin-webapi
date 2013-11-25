@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "NodeJS web api for bitcoind",
   "scripts": {
-    "start": "coffee app.coffee"
+    "start": "./start.sh"
   },
   "license": "BSD-2-Clause",
   "dependencies": {
