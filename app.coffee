@@ -39,4 +39,4 @@ express().configure ->
     @use (err, req, res, next) ->
       res.send 500, err?.message or err or "Unknown error"
 
-  @listen @settings.port, @settings.host, => console.log "Running on port #{@settings.host}:#{@settings.port}"
+  @listen @settings.port, @settings.host, => console.log "Listening on #{@settings.host}:#{@settings.port}"
