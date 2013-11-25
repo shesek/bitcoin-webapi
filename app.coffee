@@ -12,7 +12,7 @@ express().configure ->
   @use express.urlencoded()
 
   if process.env.CORS then @use (req, res, next) ->
-    res.set 'Access-Control-Allow-Origin', '*'
+    res.set 'Access-Control-Allow-Origin', process.env.CORS
     do next
 
   @get '/unspent/:address', (req, res, next) ->
