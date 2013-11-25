@@ -5,6 +5,7 @@ bitcoin = bitcoin_jsonrpc process.env.BITCOIN_URL or throw new Error 'Missing BI
 
 express().configure ->
   @set 'port', process.env.PORT or 9999
+  @set 'host', process.env.HOST or '127.0.0.1'
 
   @use express.favicon()
   @use express.logger 'dev'
@@ -38,4 +39,4 @@ express().configure ->
     @use (err, req, res, next) ->
       res.send 500, err?.message or err or "Unknown error"
 
-  @listen @settings.port, => console.log "Running on port #{@settings.port}"
+  @listen @settings.port, @settings.host, => console.log "Running on port #{@settings.host}:#{@settings.port}"
